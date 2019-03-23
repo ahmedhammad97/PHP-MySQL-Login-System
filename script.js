@@ -3,7 +3,7 @@ $("#regButton").on("click", (e)=>{
   e.preventDefault();
 
   //Checks
-  if(!checkEmptyInput()){return;}
+  //if(!checkEmptyInput()){return;}
   if(!validateEmail($(":input")[1].value)){
     alert("Invalid email format, please try again");
     return;
@@ -34,7 +34,7 @@ $("#logButton").on("click", (e)=>{
   e.preventDefault();
 
   //Checks
-  if(!checkEmptyInput()){return;}
+  //if(!checkEmptyInput()){return;}
 
   //Passed from validations
   var AjaxObject = $.ajax({
@@ -63,7 +63,7 @@ function validateEmail(email){
 function checkEmptyInput(){
   let data = $(":input");
   for(let i=0; i<data.length; i++){
-    if(data[0].value.trim() == ""){
+    if(data[i].value.trim() === ""){
       alert("Please fill all fields");
       return false;
     }

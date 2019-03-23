@@ -12,8 +12,8 @@
     //Table creation
     $sql = "CREATE TABLE IF NOT EXISTS User (
       user_id INT(6) UNSIGNED PRIMARY KEY,
-      email VARCHAR(50),
-      username VARCHAR(30) NOT NULL,
+      email VARCHAR(50) UNIQUE,
+      username VARCHAR(30) NOT NULL UNIQUE,
       password VARCHAR(50) NOT NULL,
       registeration_date TIMESTAMP,
       last_login_date TIMESTAMP
